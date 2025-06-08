@@ -42,7 +42,7 @@ const ContactForm: React.FC = () => {
     try {
       // Prepare notification message
       const message = `
-<b>Новая заявка с сайта</b>
+<b>Новая заявка с сайта sops</b>
 <b>Имя:</b> ${formData.name}
 <b>Email:</b> ${formData.email}
 <b>Телефон:</b> ${formData.phone || 'Не указан'}

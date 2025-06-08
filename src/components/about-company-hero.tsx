@@ -19,7 +19,7 @@ const FullWidthSection = styled.section`
   overflow: hidden;
 `;
 
-export default function AboutCompanyHero() {
+export default function CyberSecurityHero() {
   const [init, setInit] = useState(false);
 
   // Initialize particles engine once
@@ -51,17 +51,17 @@ export default function AboutCompanyHero() {
           distance: 280,
           links: {
             opacity: 0.9,
-            color: '#55529E',
+            color: '#0a4275',
           },
         },
       },
     },
     particles: {
       color: {
-        value: ['#55529E', '#171717', '#ff7803'],
+        value: ['#0a4275', '#0f172a', '#06b6d4'],
       },
       links: {
-        color: '#55529E',
+        color: '#0a4275',
         distance: 190,
         enable: true,
         opacity: 0.8,
@@ -109,33 +109,32 @@ export default function AboutCompanyHero() {
   return (
     <FullWidthSection>
       {/* Particles Background */}
-      <div style={{ minHeight: '100vh', height: 'auto' }} className="absolute inset-0 z-0 overflow-hidden bg-gradient-to-b from-white to-gray-100">
+      <div style={{ minHeight: '100vh', height: 'auto' }} className="absolute inset-0 z-0 overflow-hidden bg-gradient-to-b from-slate-900 to-blue-900">
         {init && <Particles id="tsparticles" options={particlesOptions} className="absolute inset-0 w-full min-h-full" />}
-        <div className="absolute inset-0 bg-white/40 z-[2]"></div>
+        <div className="absolute inset-0 bg-blue-900/20 z-[2]"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 flex items-center justify-center min-h-screen container mx-auto px-4">
         <motion.div
-          className="max-w-3xl text-center px-6 py-8 sm:px-8 rounded-xl bg-transparent backdrop-blur-md shadow-lg my-auto"
+          className="max-w-3xl text-center px-6 py-8 sm:px-8 rounded-xl bg-slate-900/50 backdrop-blur-md shadow-lg my-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}>
           <motion.h2
-            className="text-4xl md:text-5xl font-bold mb-6 text-dark"
+            className="text-4xl md:text-5xl font-bold mb-6 text-white"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}>
-            О компании <span className="text-primary">Крафт Лаб</span>
+            <span className="text-cyan-400">СОПС</span> — Современные Решения Кибербезопасности
           </motion.h2>
 
-          <motion.p className="text-lg md:text-xl text-dark/90 mb-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }}>
-            Компания «Крафт Лаб» специализируется на разработке программного обеспечения и IT-консалтинге. Мы предлагаем полный цикл услуг от проектирования до внедрения
-            и поддержки IT-решений.
+          <motion.p className="text-lg md:text-xl text-white/90 mb-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }}>
+            Мы обеспечиваем комплексную защиту информационных систем вашего бизнеса от современных киберугроз. Наши решения адаптируются под специфику вашей отрасли и масштаб компании.
           </motion.p>
 
-          <motion.p className="text-lg md:text-xl text-dark/90 mb-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.6 }}>
-            Наша команда состоит из опытных разработчиков, аналитиков и проектных менеджеров, которые обеспечивают высокое качество и своевременную реализацию проектов.
+          <motion.p className="text-lg md:text-xl text-white/90 mb-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.6 }}>
+            Команда экспертов СОПС использует передовые технологии и методологии для обнаружения уязвимостей, предотвращения атак и оперативного реагирования на инциденты.
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -147,20 +146,20 @@ export default function AboutCompanyHero() {
                 color: 'primary',
                 variant: 'shadow',
                 size: 'lg',
-                class: 'w-full sm:w-auto',
+                class: 'w-full sm:w-auto bg-cyan-500 hover:bg-cyan-600',
               })}
-              href="/about">
-              Подробнее о нас
+              href="#services">
+              Наши услуги
             </Link>
             <Link
               className={buttonStyles({
                 color: 'default',
                 variant: 'bordered',
                 size: 'lg',
-                class: 'w-full sm:w-auto bg-primary/10 backdrop-blur-sm text-primary border-primary/30 hover:bg-primary/20',
+                class: 'w-full sm:w-auto bg-white/10 backdrop-blur-sm text-white border-white/30 hover:bg-white/20',
               })}
-              href="/services">
-              Наши услуги
+              href="#contacts">
+              Связаться с нами
             </Link>
           </motion.div>
         </motion.div>

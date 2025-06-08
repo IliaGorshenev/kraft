@@ -13,18 +13,18 @@ export default function DefaultLayout({ children }: { children: React.ReactNode 
             {/* Contact Information */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Контакты</h3>
-              <p className="text-default-600 mb-2">Смирновская ул, д. 25 стр. 15, помещ. 12а</p>
-              <p className="text-default-600 mb-2">+7 (909) 157-99-57</p>
+              <p className="text-default-600 mb-2">г. Москва</p>
+              {/* <p className="text-default-600 mb-2"></p> */}
               <p className="text-default-600 mb-2">
-                <Link className="text-primary hover:underline" href="mailto:info@kraftlab.ru">
-                  info@kraftlab.ru
+                <Link className="text-primary hover:underline" href="mailto:info@soperations.ru">
+                  info@soperations.ru
                 </Link>
               </p>
             </div>
 
             {/* Company Activities */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">Деятельность компании «Крафт Лаб» в сфере IT:</h3>
+              <h3 className="text-lg font-semibold mb-4">Деятельность компании «СОПС» в сфере IT:</h3>
               <ul className="text-default-600">
                 <li className="mb-1">ОКВЭД 62.01 - Разработка компьютерного программного обеспечения</li>
                 <li className="mb-1">ОКВЭД 62.02 - Деятельность консультативная и работы в области компьютерных технологий</li>
@@ -35,10 +35,9 @@ export default function DefaultLayout({ children }: { children: React.ReactNode 
             {/* Company Details */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Реквизиты</h3>
-              <p className="text-default-600 mb-1">ООО «Крафт Лаб»</p>
-              <p className="text-default-600 mb-1">ИНН: 7722374819</p>
-              <p className="text-default-600 mb-1">КПП: 772201001</p>
-              <p className="text-default-600 mb-1">ОГРН: 1167746840150</p>
+              <p className="text-default-600 mb-1">ООО «СОПС»</p>
+              <p className="text-default-600 mb-1">ИНН: 9703210784</p>
+              <p className="text-default-600 mb-1">КПП: 770301001</p>
             </div>
           </div>
         </div>

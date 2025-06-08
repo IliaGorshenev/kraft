@@ -12,6 +12,138 @@ export interface Service {
   description: string;
   imageSrc: string;
 }
+
+// Cybersecurity service interface
+export interface CyberSecurityService {
+  id: string;
+  displayNumber: string;
+  title: string;
+  description: string;
+  imageSrc: string;
+  detailedDescription?: string;
+  benefits?: string[];
+  technologies?: string[];
+  category: 'protection' | 'monitoring' | 'response' | 'compliance';
+  icon?: string;
+}
+
+export const cyberSecurityServices: CyberSecurityService[] = [
+  {
+    id: 'security-audit',
+    displayNumber: '01',
+    title: 'Аудит безопасности',
+    description: 'Комплексная оценка защищенности информационных систем и выявление уязвимостей в IT-инфраструктуре',
+    imageSrc: '/cyber-security/audit.jpg',
+    detailedDescription:
+      'Наши специалисты проводят всесторонний анализ вашей IT-инфраструктуры, выявляя потенциальные уязвимости и риски безопасности. По результатам аудита вы получаете детальный отчет с рекомендациями по устранению выявленных проблем.',
+    benefits: [
+      'Выявление уязвимостей до их эксплуатации злоумышленниками',
+      'Оценка соответствия требованиям регуляторов',
+      'Проверка эффективности существующих мер защиты',
+      'Приоритизация рисков безопасности',
+      'Рекомендации по усилению защиты',
+    ],
+    technologies: ['Penetration Testing', 'Vulnerability Scanning', 'Security Assessment', 'Compliance Checking'],
+    category: 'protection',
+    icon: 'ShieldAlert',
+  },
+  {
+    id: 'data-protection',
+    displayNumber: '02',
+    title: 'Защита данных',
+    description: 'Комплексные решения для шифрования и контроля доступа к конфиденциальной информации',
+    imageSrc: '/cyber-security/data-protection.jpg',
+    detailedDescription:
+      'Мы внедряем современные системы защиты данных, включая шифрование, управление доступом и предотвращение утечек. Наши решения обеспечивают безопасность информации на всех этапах ее обработки и хранения.',
+    benefits: [
+      'Шифрование конфиденциальных данных',
+      'Контроль доступа к информации',
+      'Предотвращение утечек данных',
+      'Защита персональных данных в соответствии с 152-ФЗ',
+      'Безопасное хранение и передача информации',
+    ],
+    technologies: ['Data Encryption', 'DLP Systems', 'Access Control', 'Data Classification'],
+    category: 'protection',
+    icon: 'Lock',
+  },
+  {
+    id: 'security-monitoring',
+    displayNumber: '03',
+    title: 'Мониторинг безопасности',
+    description: 'Круглосуточное отслеживание инцидентов безопасности и оперативное реагирование на угрозы',
+    imageSrc: '/cyber-security/monitoring.jpg',
+    detailedDescription:
+      'Наш центр мониторинга безопасности работает 24/7, обеспечивая непрерывное наблюдение за вашими информационными системами. Мы оперативно выявляем и реагируем на подозрительную активность, предотвращая возможные атаки.',
+    benefits: [
+      'Круглосуточный мониторинг событий безопасности',
+      'Раннее обнаружение кибератак',
+      'Оперативное реагирование на инциденты',
+      'Снижение времени обнаружения угроз',
+      'Минимизация ущерба от кибератак',
+    ],
+    technologies: ['SIEM', 'IDS/IPS', 'EDR', 'Network Monitoring', 'Log Analysis'],
+    category: 'monitoring',
+    icon: 'Server',
+  },
+  {
+    id: 'incident-response',
+    displayNumber: '04',
+    title: 'Реагирование на инциденты',
+    description: 'Оперативное устранение последствий кибератак и восстановление работоспособности систем',
+    imageSrc: '/cyber-security/incident-response.jpg',
+    detailedDescription:
+      'В случае кибератаки наша команда экспертов оперативно локализует угрозу, минимизирует ущерб и восстанавливает работоспособность систем. Мы также проводим расследование инцидента для предотвращения подобных ситуаций в будущем.',
+    benefits: [
+      'Быстрая локализация и устранение угроз',
+      'Минимизация времени простоя систем',
+      'Восстановление данных после инцидентов',
+      'Расследование причин инцидента',
+      'Рекомендации по предотвращению повторных атак',
+    ],
+    technologies: ['Forensic Analysis', 'Malware Removal', 'System Recovery', 'Threat Hunting'],
+    category: 'response',
+    icon: 'Database',
+  },
+  {
+    id: 'compliance-management',
+    displayNumber: '05',
+    title: 'Соответствие требованиям',
+    description: 'Обеспечение соответствия информационных систем требованиям законодательства и отраслевых стандартов',
+    imageSrc: '/cyber-security/compliance.jpg',
+    detailedDescription:
+      'Мы помогаем организациям соответствовать требованиям российского законодательства (152-ФЗ, 187-ФЗ) и международных стандартов в области информационной безопасности. Наши эксперты проводят оценку соответствия и разрабатывают план мероприятий по устранению несоответствий.',
+    benefits: [
+      'Соответствие требованиям 152-ФЗ, 187-ФЗ',
+      'Подготовка к проверкам регуляторов',
+      'Разработка внутренней документации',
+      'Внедрение процессов управления безопасностью',
+      'Регулярный контроль соответствия требованиям',
+    ],
+    technologies: ['ISO 27001', 'PCI DSS', 'GDPR', 'ФСТЭК', 'ФСБ'],
+    category: 'compliance',
+    icon: 'FileCheck',
+  },
+  {
+    id: 'secure-infrastructure',
+    displayNumber: '06',
+    title: 'Защищенная инфраструктура',
+    description: 'Проектирование и внедрение защищенной IT-инфраструктуры с учетом современных киберугроз',
+    imageSrc: '/cyber-security/infrastructure.jpg',
+    detailedDescription:
+      'Мы создаем надежную и безопасную IT-инфраструктуру, устойчивую к современным киберугрозам. Наши решения включают многоуровневую защиту, сегментацию сети и контроль доступа, обеспечивая безопасность ваших данных и систем.',
+    benefits: [
+      'Многоуровневая защита информационных систем',
+      'Сегментация сети для минимизации рисков',
+      'Защита от внешних и внутренних угроз',
+      'Безопасный удаленный доступ',
+      'Отказоустойчивость и непрерывность бизнеса',
+    ],
+    technologies: ['Next-Gen Firewalls', 'VPN', 'NAC', 'Secure SD-WAN', 'Zero Trust'],
+    category: 'protection',
+    icon: 'Shield',
+  },
+];
+
 export const servicesContent: Service[] = [
   {
     id: 'it-integration',
